@@ -1,0 +1,12 @@
+{
+   "classification_type" : "binary",
+   "entities" : ["Protein"],
+   "relations": {
+          "Complex_formation": {"type": "undirectional" ,
+                                "valid_pairs": ["Protein Protein"]
+          }
+   },
+   "evaluation_parameters" : {
+          "decimal_points" : 4
+   }
+}
