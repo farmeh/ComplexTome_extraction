@@ -25,6 +25,8 @@ If not, make sure to download the model manually and place it correctly into tha
 
 Then the code will download the trained model **weights** from Zenodo and extract it in `the_best_model` directory. 
 It then executes `python rewite_model_address.py` to add `original_model` path to `the_best_model/info.json` file.
+and if that line fails, try with `python3 rewite_model_address.py`.
+
 
 Then in order to run prediction you need to run (after updating it with needed information such as you account information on the cluster, etc):
 ```
