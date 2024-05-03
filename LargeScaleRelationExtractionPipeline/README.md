@@ -16,7 +16,15 @@ Then you need to either use a model you trained yourself using the code in `Trai
 ```
 bash get_model.sh
 ```
-This will download the model from Zenodo and extract it in `the_best_model` directory. On top of that it will create the necessary directories for successfully running the job.
+This code first ceate all necessary folders and then downloads the [RoBERTa-large-PM-M3-Voc model](https://dl.fbaipublicfiles.com/biolm/RoBERTa-large-PM-M3-Voc-hf.tar.gz) (pre-trained RoBERTa model on PubMed and PMC and MIMIC-III with a BPE Vocab learnt from PubMed),
+which is used by our system and extract it into the `original_model` folder: `$HOME/ComplexTome_extraction/LargeScaleRelationExtractionPipeline/original_model/`.
+In case this fails, you can manually download the pre-trained model from [here](https://github.com/facebookresearch/bio-lm/blob/main/README.md) and extract it to the model folder.
+
+If everything goes right, then the model should be here:`$HOME/ComplexTome_extraction/LargeScaleRelationExtractionPipeline/original_model/RoBERTa-large-PM-M3-Voc/RoBERTa-large-PM-M3-Voc-hf`
+If not, make sure to download the model manually and place it correctly into that folder.
+
+Then the code will download the trained model **weights** from Zenodo and extract it in `the_best_model` directory. 
+It then executes `python rewite_model_address.py` to add `original_model` path to `the_best_model/info.json` file.
 
 Then in order to run prediction you need to run:
 ```

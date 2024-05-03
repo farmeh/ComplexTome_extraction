@@ -35,4 +35,3 @@ if __name__=="__main__":
     print ("setting pretrained_model_name_or_path = " , new_moodel_path)
     save_as_json(content, "the_best_model/info.json")
     print ("Done.")
-    

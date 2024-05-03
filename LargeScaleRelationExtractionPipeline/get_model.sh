@@ -15,3 +15,4 @@ wget 'https://zenodo.org/records/8139717/files/relation_extraction_string_v12_be
 tar -xvf model.tar.gz -C ./the_best_model
 rm model.tar.gz
 
+python rewite_model_address.py
